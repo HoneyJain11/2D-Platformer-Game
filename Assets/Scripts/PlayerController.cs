@@ -14,6 +14,8 @@
         public ScoreController ScoreController;
         public GameObject DeathPanel;
 
+
+
         public HealthManagerController healthManagerController;
 
     
@@ -23,6 +25,7 @@
             rb2d = gameObject.GetComponent<Rigidbody2D>();      
         }
 
+    
     public void KillPlayer()
     {
         if(healthManagerController.healthCounter > 1)
@@ -119,20 +122,31 @@
                 transform.localScale = scale; //transform.localScale=(scale.x,2.0f,1.0f);
             }
 
-        
-            //crouch Animation
 
-            if (crouchVertical == true)
-            {
-                animator.SetBool("crouch", true);
+        //crouch Animation
+
+            if (crouchVertical)
+             {
+              animator.SetBool("crouch", true);
 
             }
             else
             {
-                animator.SetBool("crouch",false);
+             animator.SetBool("crouch", false);
             }
-        
-        }
+
+
+        /* if (crouchVertical == true)
+         {
+             animator.SetBool("crouch", true);
+
+         }
+         else
+         {
+             animator.SetBool("crouch",false);
+         }*/
+
+    }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
