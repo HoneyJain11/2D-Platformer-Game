@@ -1,2 +1,6 @@
 # 2D-Platformer-Game
-The 2D platformer game to be forked something like mario its a clean repo made for LTS version
+In this 2D platformer game i added have must animations of player like Walking,Running,Jumping,Crouching etc.
+Added AI for 2D patrolling enemy,
+Generic Singleton Approach for Sound Manager.
+Implemented Responsive UI for player’s health and collectables.
+
